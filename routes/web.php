@@ -58,3 +58,17 @@ Route::get('/aboutus', function () {
 //Route Auth
 Auth::routes();
 
+Route::get('/dashboardUMKM', [App\Http\Controllers\DashboardUMKMController::class, 'index'])->name('dashboardUMKM');
+Route::get('/myStore', [App\Http\Controllers\MyStoreController::class, 'index'])->name('myStore');
+Route::get('/product', [App\Http\Controllers\ProductController::class, 'index'])->name('product');
+Route::get('/blogUMKM', [App\Http\Controllers\BlogUMKMController::class, 'index'])->name('blogUMKM');
+
+Route::get('/myStore/create', [App\Http\Controllers\MyStoreController::class, 'create']);
+Route::get('/product/create', [App\Http\Controllers\ProductController::class, 'create']);
+Route::get('/blogUMKM/create', [App\Http\Controllers\BlogUMKMController::class, 'create']);
+
+
+Route::get('/dashboardAdmin', [App\Http\Controllers\DashboardAdminController::class, 'index'])->name('dashboardAdmin');
+Route::get('/storeAdmin', [App\Http\Controllers\StoreAdminController::class, 'index'])->name('storeAdmin');
+Route::get('/blogAdmin', [App\Http\Controllers\BlogAdminController::class, 'index'])->name('blogAdmin');
+
